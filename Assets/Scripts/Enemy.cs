@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public GameObject Text;
     public GameObject enemy;
     public float move;
     public int speed;
@@ -59,6 +60,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("hitp");
             Destroy(player);
+            Text.SetActive(true);
         }
         
     }

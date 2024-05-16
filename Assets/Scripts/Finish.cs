@@ -22,7 +22,7 @@ public class Finish : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            
+            text.SetActive(true);
         }
     }
 }
