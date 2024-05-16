@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject enemy;
     private Rigidbody2D rb;
     public float move;
     public float speed;
@@ -49,8 +50,17 @@ public class PlayerMovement : MonoBehaviour
         {
             Isgrounded = false;
         }
+
+     
     }
-    
-    
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+           if (collision.gameObject.CompareTag("Hitbox"))
+           {
+            Debug.Log("hitp");
+            Destroy(enemy);
+           }
+    }
+
+
 }

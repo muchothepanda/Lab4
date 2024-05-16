@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public GameObject pointB;
     private Transform current;
     private Rigidbody2D rb;
+    public GameObject player;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -56,8 +57,11 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("hit");
-            Destroy(enemy);
+            Debug.Log("hitp");
+            Destroy(player);
         }
+        
     }
+
+    
 }
