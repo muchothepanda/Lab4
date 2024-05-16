@@ -6,14 +6,12 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public GameObject Text;
-    public GameObject enemy;
-    public float move;
-    public int speed;
     public GameObject pointA;
     public GameObject pointB;
+    public GameObject player; 
     private Transform current;
     private Rigidbody2D rb;
-    public GameObject player;
+    public int speed;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
